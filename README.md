@@ -9,11 +9,12 @@ vue-express-mongdb-blog文章管理系统的后端系统，
 
 ## Ⅰ. Project setup
 
+### Install
 ```
 npm install
 ```
 
-## Ⅱ. Run Server
+### . Run Server
 
 ```
 node index.js
@@ -22,6 +23,37 @@ node index.js
 #### 该分支为纯服务器， 整合前端项目的版本可查看[release](https://github.com/hjwforever/vue-express-mongdb-blog-server/tree/release)分支
 
 #### 纯前端项目可移步 [https://github.com/hjwforever/vue-express-mongdb-blog](https://github.com/hjwforever/vue-express-mongdb-blog)
+
+## Ⅱ. Project Structure
+项目目录结构:
+```
+├─.gitignore 
+├─config ------------------ // 配置文件
+│ ├─auth.config.js -------- // ！！ 自定义秘钥(在控制模块中配合jsonwebtoken生成登录后的有效期一天的accessToken)
+│ └─db.config.js ---------- // 配置连接mongodb数据库的url，在index.js中配合mongoose连接云端(服务器AWS Singapore )的mongodb数据库
+├─controllers ------------- // 控制模块
+│ ├─auth.controller.js ---- // 登录验证(！！！ 使用jsonwebtoken及自定的秘钥生成accessToken，有效期设置为一天)、注册验证(引用中间件的注册验证模块，若注册成功则使用bcryptjs将密码转码保存至数据库，保证安全)
+│ ├─post.controller.js ---- // ！！ 定义文章API请求函数，对数据库的文章信息进行操作
+│ └─user.controller.js ---- // 用户函数，对应不同权限(如user、admin等)返回不同内容
+├─index.js 
+├─middlewares ------------- // 中间件模块
+│ ├─authJwt.js ------------ // ！！ 权限验证，验证请求是否有有效的token，及与请求内容相对应的用户权限(user、admin等)
+│ ├─index.js -------------- // 入口文件
+│ └─verifySignUp.js ------- // 注册验证，防止重复用户名、邮箱或者用户权限重复
+├─models ------------------ // 模型类
+│ ├─index.js -------------- // 入口文件
+│ ├─post.model.js --------- // 文章Model类
+│ ├─role.model.js --------- // 角色Model类
+│ └─user.model.js --------- // 用户Model类
+├─package-lock.json 
+├─package.json 
+├─README.md 
+└─routes ------------------ // 路由模块
+  ├─auth.routes.js -------- // 注册验证，检验是否已存在相同用户名或邮箱，或者该用户已存在想要添加的权限
+  ├─post.routes.js -------- // ！！文章API请求接口，详情请看https://github.com/hjwforever/vue-express-mongdb-blog-server/tree/main#%E2%85%B2-api
+  └─user.routes.js -------- // 用户路由，根据用户权限(user、admin等)返回不停内容
+```
+
 
 ## Ⅲ. API
 
