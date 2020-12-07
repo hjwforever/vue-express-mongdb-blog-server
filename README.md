@@ -19,7 +19,7 @@ npm install
 node index.js
 ```
 
-#### 该分支为纯服务器， 整合前端项目的版本可查看[release]([hjwforever/vue-express-mongdb-blog-server at release (github.com)](https://github.com/hjwforever/vue-express-mongdb-blog-server/tree/release))分支
+#### 该分支为纯服务器， 整合前端项目的版本可查看[release](https://github.com/hjwforever/vue-express-mongdb-blog-server/tree/release)分支
 
 
 
@@ -31,12 +31,16 @@ node index.js
 
 ### ① POST `posts`
 
-path: `posts   `<br>
+path: `posts   `
 
 ```
 eg. 
 http://localhost:8080/api/posts
+```
+
 requestBody:
+
+```json
 {
     "title":"Test 5",  // 文章标题
     "author":"aruoxi",    // 文章作者
@@ -116,7 +120,8 @@ method:
 description: 
 
 >获取指定id的文章 
->response body: 
+
+response body: 
 
 ```json
 {
@@ -144,9 +149,12 @@ path:
  `posts/:id   `
 
 ```
-eg. 
-http://localhost:8080/api/posts/5fc8844baf55d7238c21ff4a
+eg.  http://localhost:8080/api/posts/5fc8844baf55d7238c21ff4a
+```
+
 requestBody:
+
+```json
 {
     "title":"Test 1",  // 文章标题
     "author":"hjw",    // 文章作者
@@ -179,7 +187,11 @@ path:
 ```
 eg. 
 http://localhost:8080/api/post/like
+```
+
 requestBody:
+
+```json
 {
     "id": "5fcc868cf5c2372360e43366",       // 文章id
     "userId": "5fc338708aaaa83f10b8269e",   // 用户id
