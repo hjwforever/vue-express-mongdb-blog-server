@@ -21,7 +21,7 @@ node index.js
 
 #### 该分支为纯服务器， 整合前端项目的版本可查看[release](https://github.com/hjwforever/vue-express-mongdb-blog-server/tree/release)分支
 
-
+#### 纯前端项目可移步 [https://github.com/hjwforever/vue-express-mongdb-blog](https://github.com/hjwforever/vue-express-mongdb-blog)
 
 ## Ⅲ. API
 
