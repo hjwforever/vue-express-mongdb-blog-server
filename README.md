@@ -1,11 +1,23 @@
+* [vue\-express\-mongdb\-blog\-server](#vue-express-mongdb-blog-server)
+  * [Ⅰ\. Project setup](#ⅰ-project-setup)
+    * [Install](#install)
+    * [Run Server](#run-server)
+      * [该分支为纯服务器， 整合前端项目的版本可查看<a href="https://github\.com/hjwforever/vue\-express\-mongdb\-blog\-server/tree/release">release</a>分支](#该分支为纯服务器-整合前端项目的版本可查看release分支)
+      * [纯前端项目可移步 <a href="https://github\.com/hjwforever/vue\-express\-mongdb\-blog">https://github\.com/hjwforever/vue\-express\-mongdb\-blog</a>](#纯前端项目可移步-httpsgithubcomhjwforevervue-express-mongdb-blog)
+  * [Ⅲ\. API](#ⅲ-api)
+    * [① POST posts](#-post-posts)
+    * [②  GET posts[?page=page[&amp;size=size]] (default page=0,size=3)](#--get-postspagepagesizesize-default-page0size3)
+    * [③ GET posts/:id](#-get-postsid)
+    * [④ PUT posts/:id](#-put-postsid)
+    * [⑤ PUT post/like](#-put-postlike)
+
+
 # vue-express-mongdb-blog-server
 
 >前端Vue，后端Express，数据库Mongodb 
 
 vue-express-mongdb-blog文章管理系统的后端系统，
 带有登录注册及相关中间件、权限区别、分页搜索、增删改查文章功能等api接口;
-
-
 
 ## Ⅰ. Project setup
 
@@ -14,7 +26,7 @@ vue-express-mongdb-blog文章管理系统的后端系统，
 npm install
 ```
 
-### . Run Server
+### Run Server
 
 ```
 node index.js
@@ -24,7 +36,7 @@ node index.js
 
 #### 纯前端项目可移步 [https://github.com/hjwforever/vue-express-mongdb-blog](https://github.com/hjwforever/vue-express-mongdb-blog)
 
-## Ⅱ. Project Structure
+## 
 项目目录结构:
 ```
 ├─.gitignore 
