@@ -14,6 +14,4 @@ node index.js
 ```
 正常运行后即可访问 http://localhost:8080 访问页面
 
-[示例网站](http://blog.aruoxi.top){:target="_blank"}
-<a href="http://blog.aruoxi.top" target="_blank">示例网站</a>
-<br><a href="http://blog.aruoxi.top" target="_blank">示例网站</a>
+[示例网站](http://blog.aruoxi.top)
