@@ -10,6 +10,8 @@
     * [③ GET posts/:id](#-get-postsid)
     * [④ PUT posts/:id](#-put-postsid)
     * [⑤ PUT post/like](#-put-postlike)
+    * [⑥ DELETE posts](#-delete-posts)
+    * [⑦ DELETE posts/:id](#-delete-postsid)
 
 
 # vue-express-mongdb-blog-server
@@ -20,13 +22,14 @@
 
  vue-express-mongdb-blog文章管理系统的后端系统，
  带有登录注册及相关中间件、权限区别、分页搜索、增删改查文章功能等api接口;
-   
+
  ***[示例网站](http://blog.aruoxi.top)***
 
 
 ## Ⅰ. Project setup
 
 ### Install
+
 ```
 npm install
 ```
@@ -43,6 +46,7 @@ node index.js
 
 ## 
 项目目录结构:
+
 ```
 ├─.gitignore 
 ├─config ------------------ // 配置文件
@@ -266,5 +270,65 @@ response body:
 【"unlike": true】:  // 取消点赞
 {
     "message": "successfully, The User(id=5fc338708aaaa83f10b8269e) unliked  the Post(id=5fcc868cf5c2372360e43366)!"
+}
+```
+
+
+
+### ⑥ `DELETE` `posts`
+
+path: 
+
+`posts   `
+
+```
+eg. 
+http://localhost:8080/api/posts
+```
+
+method: 
+
+`DELETE`
+
+description: 
+
+>删除所有文章
+
+response body: 
+
+```
+{
+    "message": "55 Posts were deleted successfully!"  //多少篇文章被删除
+}
+```
+
+
+
+
+
+### ⑦ `DELETE` `posts/:id`
+
+path: 
+
+`posts/:id   `
+
+```
+eg. 
+http://localhost:8080/api/posts/5fce10b8b0505f25d8037988
+```
+
+method: 
+
+`DELETE`
+
+description: 
+
+>删除指定id的文章
+
+response body: 
+
+```
+{
+    "message": "Post was deleted successfully!"  //文章被成功删除
 }
 ```
