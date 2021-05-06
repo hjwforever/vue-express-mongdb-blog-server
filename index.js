@@ -11,7 +11,7 @@ const app = express();
 app.use(express.static(path));
 
 const corsOptions = {
-    origin: "http://localhost:8081"
+    origin: ["http://localhost:8080", "http://localhost:8081"]
     // origin: "http://localhost:8084"
 };
 
@@ -48,14 +48,6 @@ app.get("/", (req, res) => {
 require('./routes/auth.routes')(app);
 require('./routes/user.routes')(app);
 require("./routes/post.routes")(app);
-
-// const authRoutes = require('./routes/auth.routes')
-// const userRoutes = require('./routes/user.routes')
-// const postRoutes = require("./routes/post.routes")
-
-// app.use('/',authRoutes);
-// app.use('/',userRoutes);
-// app.use('/',postRoutes);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
