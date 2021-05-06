@@ -45,17 +45,17 @@ app.get("/", (req, res) => {
 });
 
 // routes
-// require('./routes/auth.routes')(app);
-// require('./routes/user.routes')(app);
-// require("./routes/post.routes")(app);
+require('./routes/auth.routes')(app);
+require('./routes/user.routes')(app);
+require("./routes/post.routes")(app);
 
-const authRoutes = require('./routes/auth.routes')
-const userRoutes = require('./routes/user.routes')
-const postRoutes = require("./routes/post.routes")
+// const authRoutes = require('./routes/auth.routes')
+// const userRoutes = require('./routes/user.routes')
+// const postRoutes = require("./routes/post.routes")
 
-app.use('/',authRoutes);
-app.use('/',userRoutes);
-app.use('/',postRoutes);
+// app.use('/',authRoutes);
+// app.use('/',userRoutes);
+// app.use('/',postRoutes);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
