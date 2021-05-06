@@ -119,3 +119,5 @@ dist
 # views
 .idea
 views
+
+.vercel
