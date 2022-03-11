@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  server:
+    restart: always
+    image: aruoxi/vue-express-mongodb-blog-server:latest
+    container_name: blog-server
+    ports:
+      - 8080:8080
+    networks:
+      - vue-express
+
+  client:
+    restart: always
+    image: aruoxi/vue-express-mongodb-blog:latest
+    container_name: blog-client
+    environment:
+      TZ: Asia/Shanghai
+    ports:
+      - 8081:80
+    depends_on:
+      - server
+    networks:
+      - vue-express
+
+networks:
+  vue-express: {}

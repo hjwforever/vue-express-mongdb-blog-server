@@ -4,7 +4,7 @@
   "description": "Node.js Restful CRUD API with Node.js, Express and MongoDB.",
   "main": "index.js",
   "scripts": {
-    "start": "now dev",
+    "start": "vercel dev",
     "dev": "node index.js",
     "serve": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
