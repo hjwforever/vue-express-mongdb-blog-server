@@ -11,7 +11,7 @@ const app = express();
 app.use(express.static(path));
 
 const corsOptions = {
-    origin: ["http://localhost:8080", "http://localhost:8081", "https://blog.aruoxi.top", "http://blog.aruoxi.top"]
+    origin: ["http://localhost:8080", "http://localhost:8081", "https://blog.aruoxi.top", "http://blog.aruoxi.top", "https://blog.hjw.dev", "http://blog.hjw.dev"]
     // origin: "http://localhost:8084"
 };
 
